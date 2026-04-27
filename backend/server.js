@@ -16,7 +16,7 @@ const frontends = [
 //   methods: ["GET", "POST"],
 //   allowedHeaders: ["Content-Type"],
 // }));
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: ['http://localhost:3000','http://fintechbalance.net'] }));
 app.use(express.json({ limit: "10kb" }));
 
 // ── Nodemailer transporter ─────────────────────────────────
