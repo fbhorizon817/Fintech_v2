@@ -71,7 +71,7 @@ const Contact = () => {
             <div>
               <SectionHeading title="Contact Information" centered={false} />
               <div className="flex flex-col gap-6">
-                <a href="mailto:info@fintechbalancehorizon.com" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors">
+                <a href="mailto:info@fintechbalance.net" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors">
                   <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center shrink-0">
                     <Mail size={20} className="text-primary-foreground" />
                   </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="font-medium text-foreground">+92 XXX XXX XXXX</p>
+                    <p className="font-medium text-foreground">+92 300 036 5617</p>
                   </div>
                 </div>
                 <a href="https://www.fintechbalance.net/" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors">
@@ -104,7 +104,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium text-foreground">Pakistan</p>
+                    <p className="font-medium text-foreground">Level 2 Skypark One, Block B, South Ave, Gulberg Greens, Islamabad</p>
                   </div>
                 </div>
               </div>
