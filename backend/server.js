@@ -16,16 +16,7 @@ const frontends = [
 //   methods: ["GET", "POST"],
 //   allowedHeaders: ["Content-Type"],
 // }));
-// app.use(cors({ origin: ['http://localhost:3000','http://fintechbalance.net','https://fintech-v2.vercel.app/'] }));
-app.use(cors({ 
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:5173',
-    'http://fintechbalance.net',
-    'https://fintech-v2.vercel.app' // ✅ NO slash
-  ],
-  methods: ["GET", "POST"],
-}));
+app.use(cors({ origin: ['http://localhost:3000','http://fintechbalance.net','https://fintech-v2.vercel.app/'] }));
 app.use(express.json({ limit: "10kb" }));
 
 // ── Nodemailer transporter ─────────────────────────────────
