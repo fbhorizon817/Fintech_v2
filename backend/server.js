@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 const frontends = [
   process.env.FRONTEND_URL || "http://localhost:3000",
-  "http://localhost:5173", "https://fintech-v2.vercel.app/", "http://fintechbalance.net"
+  "http://localhost:5173",
 ].filter(Boolean);
 
 // app.use(cors({
