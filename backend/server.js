@@ -19,7 +19,20 @@ const frontends = [
   // }));
   
   
-app.use(cors({ origin: ['http://localhost:3000','http://fintechbalance.net','https://fintech-v2.vercel.app'] }));
+// app.use(cors({ origin: ['http://localhost:3000','http://fintechbalance.net','https://fintech-v2.vercel.app'] }));
+app.use(cors({ 
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:5173",
+
+    "https://fintech-v2.vercel.app",
+    "https://fintech-v2-uz2y5jn3o-fbhorizons-projects.vercel.app",
+
+    "https://fintechbalance.net",
+    "https://www.fintechbalance.net" // ⭐ MOST IMPORTANT
+  ],
+  methods: ["GET", "POST"],
+}));
 app.use(express.json({ limit: "10kb" }));
 
 // ── Nodemailer transporter ─────────────────────────────────
