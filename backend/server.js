@@ -6,8 +6,6 @@ import nodemailer from "nodemailer";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
-
 
 const frontends = [
   process.env.FRONTEND_URL || "http://localhost:3000",
