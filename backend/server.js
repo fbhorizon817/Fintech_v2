@@ -6,19 +6,21 @@ import nodemailer from "nodemailer";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
 const frontends = [
   process.env.FRONTEND_URL || "http://localhost:3000",
   "http://localhost:5173",
 ].filter(Boolean);
 
 // app.use(cors({
-//   origin: frontends,
-//   methods: ["GET", "POST"],
-//   allowedHeaders: ["Content-Type"],
-// }));
-
-
-app.use(cors({ origin: ['http://localhost:3000','http://fintechbalance.net','https://fintech-v2.vercel.app'] }));
+  //   origin: frontends,
+  //   methods: ["GET", "POST"],
+  //   allowedHeaders: ["Content-Type"],
+  // }));
+  
+  
+  // app.use(cors({ origin: ['http://localhost:3000','http://fintechbalance.net','https://fintech-v2.vercel.app'] }));
+  app.use(cors()); // ✅ YAHAN 
 app.use(express.json({ limit: "10kb" }));
 
 // ── Nodemailer transporter ─────────────────────────────────
