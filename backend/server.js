@@ -17,7 +17,6 @@ const frontends = [
 //   allowedHeaders: ["Content-Type"],
 // }));
 
-app.use(cors());
 
 app.use(cors({ origin: ['http://localhost:3000','http://fintechbalance.net','https://fintech-v2.vercel.app'] }));
 app.use(express.json({ limit: "10kb" }));
