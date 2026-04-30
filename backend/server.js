@@ -19,9 +19,26 @@ const frontends = [
   // }));
   
   
-app.use(cors({ origin: ['http://localhost:3000','https://fintechbalance.net','https://fintech-v2.vercel.app'] }));
-app.use(express.json({ limit: "10kb" }));
+// app.use(cors({ origin: ['http://localhost:3000','https://fintechbalance.net','https://fintech-v2.vercel.app'] }));
+// app.use(express.json({ limit: "10kb" }));
 
+
+app.use(cors({
+ origin: [
+  'http://localhost:3000',
+  'https://fintechbalance.net',
+  'https://www.fintechbalance.net', // <-- ADD THIS
+  'https://fintech-v2.vercel.app'
+],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
+// Handle preflight explicitly
+app.options('*', cors());
+
+app.use(express.json({ limit: "10kb" }));
 // ── Nodemailer transporter ─────────────────────────────────
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
